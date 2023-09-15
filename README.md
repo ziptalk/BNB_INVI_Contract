@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# Invincible Node Contracts
-
+# BNB_INVI_Contract
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -46,5 +44,4 @@ npx hardhat node
 npx hardhat run scripts/deploy.ts
 ``` -->
 =======
-# BNB_INVI_Contract
->>>>>>> 29397fdf7a5fc3486070770f34ca16ed9b9317de
+
