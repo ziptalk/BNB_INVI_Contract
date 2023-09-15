@@ -13,7 +13,7 @@ describe("LpPool service test", function () {
   const testAddresses: any = getTestAddress(network);
 
   this.beforeAll(async function () {
-    stTokenContract = await ethers.getContractAt("IStKlay", testAddresses.klaytnLiquidStaking);
+    stTokenContract = await ethers.getContractAt("IStKlay", testAddresses.bnbLiquidStaking);
     inviCoreContract = await ethers.getContractAt("InviCore", testAddresses.inviCoreContractAddress);
   });
 

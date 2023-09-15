@@ -5,8 +5,8 @@ import { ethers, upgrades } from "hardhat";
 import { targets } from "../targets";
 import { evmosTestAddress } from "../addresses/testAddresses/address.evmos";
 import { evmosLiveAddress } from "../addresses/liveAddresses/address.evmos";
-import { klaytnTestAddress } from "../addresses/testAddresses/address.klaytn";
-import { klaytnLiveAddress } from "../addresses/liveAddresses/address.klaytn";
+import { bnbTestAddress } from "../addresses/testAddresses/address.bnb";
+import { bnbLiveAddress } from "../addresses/liveAddresses/address.bnb";
 import { bfcTestAddress } from "../addresses/testAddresses/address.bfc";
 import { bfcLiveAddress } from "../addresses/liveAddresses/address.bfc";
 
@@ -65,8 +65,8 @@ export const deployLpPoolContract = async (iLPContract: Contract, inviTokenContr
       initializer: "initialize",
     });
     await lpPoolContract.deployed();
-  } else if (network === "KLAYTN") {
-    LpPoolContract = await ethers.getContractFactory("KlaytnLiquidityProviderPool");
+  } else if (network === "bnb") {
+    LpPoolContract = await ethers.getContractFactory("bnbLiquidityProviderPool");
     lpPoolContract = await upgrades.deployProxy(LpPoolContract, [iLPContract.address, inviTokenContract.address], {
       initializer: "initialize",
     });
@@ -98,8 +98,8 @@ export const deployInviTokenStakeContract = async (inviTokenContract: Contract, 
       initializer: "initialize",
     });
     await inviTokenStakeContract.deployed();
-  } else if (network === "KLAYTN") {
-    InviTokenStakeContract = await ethers.getContractFactory("KlaytnInviTokenStake");
+  } else if (network === "bnb") {
+    InviTokenStakeContract = await ethers.getContractFactory("bnbInviTokenStake");
     inviTokenStakeContract = await upgrades.deployProxy(InviTokenStakeContract, [inviTokenContract.address], {
       initializer: "initialize",
     });
@@ -138,8 +138,8 @@ export const deployInviCoreContract = async (
       { initializer: "initialize" }
     );
     await inviCoreContract.deployed();
-  } else if (network === "KLAYTN") {
-    InviCoreContract = await ethers.getContractFactory("KlaytnInviCore");
+  } else if (network === "bnb") {
+    InviCoreContract = await ethers.getContractFactory("bnbInviCore");
     inviCoreContract = await upgrades.deployProxy(
       InviCoreContract,
       [stTokenContract, liquidStakingAddress, networkId],
@@ -235,13 +235,13 @@ export const deployAllContract = async (network: string) => {
     stTokenContractAddress = evmosLiveAddress.mainnet.stEvmosContractAddress;
     liquidStakingAddress = evmosLiveAddress.mainnet.evmosLiquidStakingContractAddress;
     networkId = 1;
-  } else if (network === "klaytn_testnet") {
-    stTokenContractAddress = klaytnLiveAddress.testnet.stakelyContractAddress;
-    liquidStakingAddress = klaytnLiveAddress.testnet.stakelyContractAddress;
+  } else if (network === "bnb_testnet") {
+    stTokenContractAddress = bnbLiveAddress.testnet.stakelyContractAddress;
+    liquidStakingAddress = bnbLiveAddress.testnet.stakelyContractAddress;
     networkId = 2;
-  } else if (network === "klaytn_mainnet") {
-    stTokenContractAddress = klaytnLiveAddress.mainnet.stakelyContractAddress;
-    liquidStakingAddress = klaytnLiveAddress.mainnet.stakelyContractAddress;
+  } else if (network === "bnb_mainnet") {
+    stTokenContractAddress = bnbLiveAddress.mainnet.stakelyContractAddress;
+    liquidStakingAddress = bnbLiveAddress.mainnet.stakelyContractAddress;
     networkId = 2;
   } else {
     //========== Test on Hardhat ==========//
@@ -249,7 +249,7 @@ export const deployAllContract = async (network: string) => {
 
     stTokenContractAddress = stTokenContract.address;
     liquidStakingAddress = stTokenContract.address;
-    networkId = 2; // based on klaytn
+    networkId = 2; // based on bnb
   }
 
   console.log("stTokenContractAddress: ", stTokenContractAddress);

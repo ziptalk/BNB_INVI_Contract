@@ -7,7 +7,7 @@ import hre from "hardhat";
 import { getTestAddress } from "../../getTestAddress";
 const { expectRevert } = require("@openzeppelin/test-helpers");
 
-const network: string = hre.network.name; // BIFROST, KLAYTN, EVMOS
+const network: string = hre.network.name; // BIFROST, bnb, EVMOS
 console.log("current Network: ", network);
 const testAddresses: any = getTestAddress(network);
 

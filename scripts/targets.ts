@@ -1,12 +1,12 @@
 //======= test Addresses =======//
-import { klaytnTestAddress } from "./addresses/testAddresses/address.klaytn";
+import { bnbTestAddress } from "./addresses/testAddresses/address.bnb";
 import { evmosTestAddress } from "./addresses/testAddresses/address.evmos";
 import { bfcTestAddress } from "./addresses/testAddresses/address.bfc";
 
 //======= live Addresses =======//
 import { bfcLiveAddress } from "./addresses/liveAddresses/address.bfc";
 import { evmosLiveAddress } from "./addresses/liveAddresses/address.evmos";
-import { klaytnLiveAddress } from "./addresses/liveAddresses/address.klaytn";
+import { bnbLiveAddress } from "./addresses/liveAddresses/address.bnb";
 
 const contractLists = [
   "InviCore", // 0
@@ -27,7 +27,7 @@ export const targets = {
 
   // ======== upgrade Addresses ========//
   upgradingContract: contractLists[2],
-  upgradingContractAddress: klaytnTestAddress.testnet.stakeNFTContractAddress,
+  upgradingContractAddress: bnbTestAddress.testnet.stakeNFTContractAddress,
 
   // ======== test Addresses ========//
   testNetworkType: "MAINNET",

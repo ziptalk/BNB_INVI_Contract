@@ -13,13 +13,6 @@ import "./lib/Logics.sol";
 import "./lib/Unit.sol";
 import "../interfaces/external/ILiquidStaking.sol";
 
-/*
-network Ids
-- bifrost: 0
-- evmos: 1
-- klaytn: 2
-*/
-
 /**
  * @title InviCore Contract
  * @dev Main contract for InviToken's staking system

@@ -8,7 +8,7 @@ import { getTestAddress } from "../../getTestAddress";
 import { deployAll } from "../../../scripts/deploy/deployAll";
 const { expectRevert } = require("@openzeppelin/test-helpers");
 
-const network: string = hre.network.name; // BIFROST, KLAYTN, EVMOS
+const network: string = hre.network.name; // BIFROST, bnb, EVMOS
 console.log("current Network: ", network);
 const testAddresses: any = getTestAddress(network);
 

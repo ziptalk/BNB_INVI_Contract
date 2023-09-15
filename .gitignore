@@ -13,6 +13,5 @@ artifacts
 contracts/Test.sol
 
 # Unnecessary folders
-contracts/Bfc
-contracts/Evmos
-contracts/Klaytn
+.openzeppelin
+.tempopenzeppelin

@@ -4,7 +4,7 @@ import { ethers, upgrades } from "hardhat";
 const { expectRevert } = require("@openzeppelin/test-helpers");
 import hre from "hardhat";
 import { bfcTestAddress } from "../../scripts/addresses/testAddresses/address.bfc";
-import { klaytnTestAddress } from "../../scripts/addresses/testAddresses/address.klaytn";
+import { bnbTestAddress } from "../../scripts/addresses/testAddresses/address.bnb";
 import { evmosTestAddress } from "../../scripts/addresses/testAddresses/address.evmos";
 import { units } from "../units";
 import { leverageStake, provideLiquidity } from "../utils";

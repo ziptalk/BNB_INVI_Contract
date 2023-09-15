@@ -3,7 +3,7 @@ import { Contract } from "ethers";
 
 // test addresses
 import { walletAddresses } from "../addresses/walletAddresses";
-import { klaytnTestAddress } from "../addresses/testAddresses/address.klaytn";
+import { bnbTestAddress } from "../addresses/testAddresses/address.bnb";
 
 //------------------------------------------------------------------------------------------------//
 //====================================== Change this part ========================================//
@@ -39,10 +39,10 @@ export const setInit = async (address: any, network: string) => {
     inviTokenStakeContract = await ethers.getContractAt("BfcInviTokenStake", address.inviTokenStakeContractAddress);
     lpPoolContract = await ethers.getContractAt("BfcLiquidityProviderPool", address.lpPoolContractAddress);
     inviCoreContract = await ethers.getContractAt("BfcInviCore", address.inviCoreContractAddress);
-  } else if (network === "KLAYTN") {
-    inviTokenStakeContract = await ethers.getContractAt("KlaytnInviTokenStake", address.inviTokenStakeContractAddress);
-    lpPoolContract = await ethers.getContractAt("KlaytnLiquidityProviderPool", address.lpPoolContractAddress);
-    inviCoreContract = await ethers.getContractAt("KlaytnInviCore", address.inviCoreContractAddress);
+  } else if (network === "bnb") {
+    inviTokenStakeContract = await ethers.getContractAt("bnbInviTokenStake", address.inviTokenStakeContractAddress);
+    lpPoolContract = await ethers.getContractAt("bnbLiquidityProviderPool", address.lpPoolContractAddress);
+    inviCoreContract = await ethers.getContractAt("bnbInviCore", address.inviCoreContractAddress);
   } else if (network === "EVMOS") {
     inviTokenStakeContract = await ethers.getContractAt("EvmosInviTokenStake", address.inviTokenStakeContractAddress);
     lpPoolContract = await ethers.getContractAt("EvmosLiquidityProviderPool", address.lpPoolContractAddress);
@@ -201,5 +201,5 @@ export const setInit = async (address: any, network: string) => {
 };
 
 //=================== when have error =================== //
-// let address = klaytnTestAddress.mainnet;
+// let address = bnbTestAddress.mainnet;
 // setInit(address, "default");

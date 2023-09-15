@@ -15,7 +15,7 @@ interface ILiquidStaking {
     // bifrost specific
     function setCandidate(address _candidate) external;
 
-    // klaytn specific
+    // bnb specific
     function totalShares() external view returns (uint256);
     function totalStaking() external view returns (uint256);
     function stakeFor(address recipient) external payable;

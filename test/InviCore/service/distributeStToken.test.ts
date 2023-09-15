@@ -7,7 +7,7 @@ import { units } from "../../units";
 import { getTestAddress } from "../../getTestAddress";
 import { deployAll } from "../../../scripts/deploy/deployAll";
 
-const network: string = hre.network.name; // BIFROST, KLAYTN, EVMOS
+const network: string = hre.network.name; // BIFROST, bnb, EVMOS
 console.log("current Network: ", network);
 const testAddresses: any = getTestAddress(network);
 
