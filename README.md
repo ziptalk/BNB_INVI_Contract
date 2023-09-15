@@ -2,15 +2,12 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [URL](#url)
-- [Wallet Addresses](#walletAddresses)
-- [Contract Addresses](#contractAddresses)
 - [Product Explanation](#productExplanation)
 
 ## Introduction
 
 <a id="introduction"></a>
-Our Goal is to absorb the EVM compatible multi-chain affiliated assets into Matic Network via Invincible node in order to contribute to becoming a
+Our Goal is to absorb the EVM compatible multi-chain affiliated assets into BNB Network via Invincible node in order to contribute to becoming a
 sustaining-scalable chain
 
 
