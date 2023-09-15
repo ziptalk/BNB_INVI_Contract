@@ -13,5 +13,5 @@ artifacts
 contracts/Test.sol
 
 # Unnecessary folders
-.openzeppelin
-.tempopenzeppelin
+.openzeppelin/
+.tempopenzeppelin/
